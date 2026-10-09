@@ -168,28 +168,70 @@ textarea:active {
 .header__logo {
   position: relative;
   float: left;
-  width: 15%;
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 15px;
-  padding-top: 30px;
+  display: block;
+  width: auto;
+  padding-top: 18px;
+  line-height: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.header__logo-mark {
+  display: block;
+  height: 42px;
+  width: auto;
 }
 
 .header__navigation {
   position: relative;
   float: left;
-  width: 85%;
-  padding-top: 30px;
-  padding-left: 90px;
+  width: auto;
+  padding-top: 32px;
+  padding-left: 42px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+@media (max-width: 900px) {
+  .header__logo {
+    padding-top: 20px;
+  }
+
+  .header__logo-mark {
+    height: 36px;
+  }
+
+  .header__navigation {
+    padding-top: 28px;
+    padding-left: 18px;
+  }
+}
+
+@media (max-width: 680px) {
+  .header__logo {
+    padding-top: 22px;
+  }
+
+  .header__logo-mark {
+    height: 32px;
+  }
+
+  .header__navigation {
+    padding-top: 26px;
+    padding-left: 12px;
+  }
+}
+
 @media (max-width: 480px) {
+  .header__logo {
+    padding-top: 24px;
+    padding-left: 6px;
+  }
+
+  .header__logo-mark {
+    height: 32px;
+  }
+
   .header__navigation {
     width: 100%;
     padding-left: 0;
@@ -198,7 +240,7 @@ textarea:active {
 
 .header__menu {
   position: relative;
-  width: 100%;
+  width: auto;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -209,16 +251,19 @@ textarea:active {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 @media (max-width: 480px) {
   .header__menu {
+    width: 100%;
     -webkit-box-orient: inherit;
     -webkit-box-direction: inherit;
     -ms-flex-direction: inherit;
     flex-direction: inherit;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     display: none;
     background-color: white;
     margin-top: 50px;
@@ -228,6 +273,18 @@ textarea:active {
 .header__menu li {
   position: relative;
   margin-left: 35px;
+}
+
+@media (max-width: 900px) {
+  .header__menu li {
+    margin-left: 18px;
+  }
+}
+
+@media (max-width: 680px) {
+  .header__menu li {
+    margin-left: 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -247,6 +304,12 @@ textarea:active {
   font-size: 14px;
   font-weight: 400;
   line-height: 11px;
+}
+
+@media (max-width: 680px) {
+  .header__menu li a {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 480px) {
